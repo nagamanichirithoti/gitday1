@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git</title>
+</head>
+<body>
+    
+<h1>What is Git?</h1>
+<p>Git is a version control system that tracks changes in source code during software development. It enables multiple developers to work together and track revisions.</p>
+
+<h1>What is GitHub?</h1>
+<p>GitHub is a web-based platform that hosts Git repositories, providing additional features for collaboration like pull requests, issue tracking, and more. It allows developers to work on projects, share code, and manage versions.</p>
+
+<h2>Basic Git Workflow</h2>
+<p>Setting up a repository: Create a local repository to manage files and track changes.</p>
+<p>Making changes: Modify code or add new files.</p>
+<p>Staging changes: Mark changes to be committed.</p>
+<p>Committing changes: Save a snapshot of the current changes.</p>
+<p>Pushing to a remote repository: Upload changes to GitHub or another Git server.</p>
+<p>Collaborating: Fetch and merge changes from others.</p>
+<p>Branching: Work on new features or fixes in isolated environments.</p>
+<p>Merging: Combine branches into the main branch.</p>
+<h2>Essential Git Commands</h2>
+<pre>1. Initial Setup Commands
+git init
+Initializes a new Git repository. Run this in the root directory of your project.</pre>
+
+<pre>bash
+Copy code
+git init
+git clone [URL]
+Copies an existing repository from GitHub to your local machine.</pre>
+
+<pre>bash
+Copy code
+git clone https://github.com/user/repo.git
+git remote add origin [URL]
+Connects your local repository to a remote one (like on GitHub).</pre>
+
+<pre>bash
+Copy code
+git remote add origin https://github.com/user/repo.git
+2. Making Changes
+git status
+Shows the status of changes in your working directory. It's useful to check which files have been modified or staged.</pre>
+
+<pre>bash
+Copy code
+git status
+git add [file_name] or git add .
+Stages a file or all files (.) to be committed.</pre>
+
+<pre>bash
+Copy code
+git add file.txt
+git add .
+git commit -m "[message]"
+Commits staged changes with a descriptive message.</pre>
+
+<pre>bash
+Copy code
+git commit -m "Add feature X"
+3. Working with Remote Repositories
+git push origin [branch_name]
+Pushes your changes to the remote repository. For example, to push to the main branch:</pre>
+
+<pre>bash
+Copy code
+git push origin main
+git pull origin [branch_name]
+Fetches changes from the remote branch and merges them into the current branch.</pre>
+
+<pre>bash
+Copy code
+git pull origin main
+git fetch
+Downloads updates from the remote repository without merging.</pre>
+
+<pre>bash
+Copy code
+git fetch
+4. Branching and Merging
+git branch [branch_name]
+Creates a new branch. A branch is an isolated environment to work on specific changes.</pre>
+
+<pre>bash
+Copy code
+git branch feature-branch
+git checkout [branch_name]
+Switches to the specified branch.</pre>
+
+<pre>bash
+Copy code
+git checkout feature-branch
+git merge [branch_name]
+Merges the specified branch into the current branch.</pre>
+
+<pre>bash
+Copy code
+git merge feature-branch
+git branch -d [branch_name]
+Deletes a branch.</pre>
+
+<pre>bash
+Copy code
+git branch -d feature-branch
+5. Undoing Changes
+git reset [file_name]
+Unstages a file, moving it from the staging area back to modified.</pre>
+
+<pre>bash
+Copy code
+git reset file.txt
+git revert [commit_id]
+Creates a new commit that undoes the changes of a specific commit.</pre>
+
+<pre>bash
+Copy code
+git revert a1b2c3d
+Example Git Workflow
+Initialize a Repository</pre>
+
+<pre>bash
+Copy code
+git init
+Connect to GitHub Repository</pre>
+
+<pre>bash
+Copy code
+git remote add origin https://github.com/user/repo.git
+Create a Branch</pre>
+
+<pre>bash
+Copy code
+git branch feature-branch
+git checkout feature-branch
+Add Changes & Commit</pre>
+
+<pre>bash
+Copy code
+git add .
+git commit -m "Implemented feature"
+Push Branch to GitHub</pre>
+
+<pre>bash
+Copy code
+git push origin feature-branch
+Open a Pull Request on GitHub
+Merge your feature branch into the main branch.</pre>
+
+<h2>Update Local Main Branch</h2>
+
+<pre>bash
+Copy code
+git checkout main
+git pull origin main
+By following this guide, you'll be able to manage code versions effectively and collaborate on GitHub projects with ease.</pre>
+</body>
+</html>
